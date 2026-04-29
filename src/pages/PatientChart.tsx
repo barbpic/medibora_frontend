@@ -51,6 +51,7 @@ interface SBARData {
   background: string;
   assessment: string;
   recommendation: string;
+  status?: string;
 }
 
 interface SBARCreateResponse {
@@ -2737,7 +2738,6 @@ export default function PatientChart() {
   const canAccessProblemsDiagnoses = user?.role === 'admin' || user?.role === 'doctor';
 
   // Clinical data queries with staleTime to prevent unnecessary refetching during navigation
-  const staleTime = 5 * 60 * 1000; // 5 minutes
 
   const { data: allergiesData } = useQuery({
     queryKey: ['allergies', patientId],

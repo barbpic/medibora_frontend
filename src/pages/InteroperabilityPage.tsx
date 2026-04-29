@@ -36,7 +36,7 @@ export default function InteroperabilityPage() {
   });
 
   // FHIR Export mutation
-  const { data: fhirData, isFetching: isFhirFetching, refetch: exportFhir } = useQuery({
+  const { data: _fhirData, isFetching: isFhirFetching, refetch: exportFhir } = useQuery({
     queryKey: ['exportFHIR', selectedPatientId],
     queryFn: async () => {
       if (!selectedPatientId) return null;
@@ -47,7 +47,7 @@ export default function InteroperabilityPage() {
   });
 
   // HL7 Export mutation  
-  const { data: hl7Data, isFetching: isHl7Fetching, refetch: exportHl7 } = useQuery({
+  const { data: _hl7Data, isFetching: isHl7Fetching, refetch: exportHl7 } = useQuery({
     queryKey: ['exportHL7', selectedPatientId],
     queryFn: async () => {
       if (!selectedPatientId) return null;

@@ -54,9 +54,6 @@ export default function PatientsDirectory() {
 
   // Format DOB as "YYYY-MM-DD • gender"
   const formatDOBGender = (patient: Patient) => {
-    const dob = patient.date_of_birth 
-      ? new Date(patient.date_of_birth).toISOString().split('T')[0]
-      : 'N/A';
     return `${patient.age} • ${patient.gender}`;
   };
 
