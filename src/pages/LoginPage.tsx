@@ -129,7 +129,7 @@ export default function LoginPage() {
 
         {/* Footer */}
         <p className="text-center text-blue-200/60 text-sm mt-8">
-          © 2024 Medibora EHR System. Machakos University Project.
+          © 2026 Medibora EHR System. Machakos University Project.
         </p>
       </div>
     </div>
